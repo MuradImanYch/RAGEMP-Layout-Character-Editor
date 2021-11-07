@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rage MP</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="playerDataWrap">
+            <p class="title">Ваши данные</p>
+            <form action="">
+                <div>
+                    <label for="name">Имя</label>
+                    <input value="Name" id="name" name="name" type="text" />
+                </div>
+                <div>
+                    <label for="lname">Фамилия</label>
+                    <input value="Lastname" id="lname" name="lname" type="text" />
+                </div>
+            </form>
+            <div id="genderWrap">
+                <div class="title">Пол</div>
+                <div class="iconsWrap">
+                    <div><i class="fas fa-mars"></i></div>
+                    <div><i class="fas fa-venus"></i></div>
+                </div>
+            </div>
+            <div id="ageWrap">
+                <div class="title">Возраст</div>
+                <span id="age">20</span>
+                <div class="rangeWrap">
+                    <input oninput="ageRange(this.value)" type="range" min="18" max="70" value="20" />
+                </div>
+            </div>
+        </div>
+        <div class="characEditorWrap">
+            <div class="col1">
+                <div class="title">Редактор персонажа</div>
+            </div>
+            <div class="col2">
+                <div class="nav">
+                    <button onclick="parents()"><img src="assets/ico/parents.ico" alt="Родители" /> Родители</button>
+                    <button onclick="appearance()"><img src="assets/ico/appearance.png" alt="Внешность" /> Внешность</button>
+                    <button onclick="hair()"><img src="assets/ico/hair.png" alt="Волосы" /> Волосы</button>
+                    <button onclick="clothes()"><img src="assets/ico/clothes.png" alt=""> Одежда</button>
+                </div>
+                <div class="main">
+                    <div class="parents">
+                        <div class="title">Родители</div>
+                        <div class="parentsImg" style="position: relative;">
+                            <img style="position: absolute; left: 0; z-index: 2;" src="" height="100%" alt="">
+                            <img style="position: absolute; right: 0; z-index: 1;" src="" height="100%" alt="">
+                        </div>
+                        <div class="params">
+                            <div>
+                                <p class="subTitle">Мать</p>
+                                <div class="inputWrap">
+                                    <button onclick="motherPrev()"><i class="fas fa-caret-left"></i></button>
+                                    <p></p>
+                                    <button onclick="motherNext()"><i class="fas fa-caret-right"></i></button>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="subTitle">Отец</p>
+                                <div class="inputWrap">
+                                    <button onclick="fatherPrev()"><i class="fas fa-caret-left"></i></button>
+                                    <p></p>
+                                    <button onclick="fatherNext()"><i class="fas fa-caret-right"></i></button>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="subTitle">Схожесть</p>
+                                <div class="inputWrap">
+                                    <span>Мать</span>
+                                    <input type="range" min="0" max="100" value="50"/>
+                                    <span>Отец</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="subTitle">Кожа</p>
+                                <div class="inputWrap">
+                                    <span>Мать</span>
+                                    <input type="range" min="0" max="100" value="50"/>
+                                    <span>Отец</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="appearance">
+                        <div class="title">Внешность</div>
+                        <div class="params">
+                            <div>
+                                <p class="subTitle">Ширина носа</p>
+                                <div class="inputWrap">
+                                    <span>1</span>
+                                    <input type="range" min="1" max="10" value="1"/>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="subTitle">Длина носа</p>
+                                <div class="inputWrap">
+                                    <span>1</span>
+                                    <input type="range" min="1" max="10" value="1"/>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="subTitle">Высота носа</p>
+                                <div class="inputWrap">
+                                    <span>1</span>
+                                    <input type="range" min="1" max="10" value="1"/>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="subTitle">Длина бровей</p>
+                                <div class="inputWrap">
+                                    <span>1</span>
+                                    <input type="range" min="1" max="10" value="1"/>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="subTitle">Густота бровей</p>
+                                <div class="inputWrap">
+                                    <span>1</span>
+                                    <input type="range" min="1" max="10" value="1"/>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="subTitle">Размер глаза</p>
+                                <div class="inputWrap">
+                                    <span>1</span>
+                                    <input type="range" min="1" max="10" value="1"/>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="subTitle">Густота бровей</p>
+                                <div class="inputWrap">
+                                    <span>1</span>
+                                    <input type="range" min="1" max="10" value="1"/>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="subTitle">Густота бровей</p>
+                                <div class="inputWrap">
+                                    <span>1</span>
+                                    <input type="range" min="1" max="10" value="1"/>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="subTitle">Густота бровей</p>
+                                <div class="inputWrap">
+                                    <span>1</span>
+                                    <input type="range" min="1" max="10" value="1"/>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="subTitle">Густота бровей</p>
+                                <div class="inputWrap">
+                                    <span>1</span>
+                                    <input type="range" min="1" max="10" value="1"/>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="subTitle">Густота бровей</p>
+                                <div class="inputWrap">
+                                    <span>1</span>
+                                    <input type="range" min="1" max="10" value="1"/>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="subTitle">Густота бровей</p>
+                                <div class="inputWrap">
+                                    <span>1</span>
+                                    <input type="range" min="1" max="10" value="1"/>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hair">
+                        <div class="title">Волосы</div>
+                        <div class="params">
+                            <div>
+                                <p class="subTitle">Цвет</p>
+                                <div class="inputWrap">
+                                    <span>1</span>
+                                    <input type="range" min="1" max="10" value="1"/>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="subTitle">Стрижка</p>
+                                <div class="inputWrap">
+                                    <span>1</span>
+                                    <input type="range" min="1" max="10" value="1"/>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="subTitle">Стрижка</p>
+                                <div class="inputWrap">
+                                    <span>1</span>
+                                    <input type="range" min="1" max="10" value="1"/>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="subTitle">Стрижка</p>
+                                <div class="inputWrap">
+                                    <span>1</span>
+                                    <input type="range" min="1" max="10" value="1"/>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="subTitle">Стрижка</p>
+                                <div class="inputWrap">
+                                    <span>1</span>
+                                    <input type="range" min="1" max="10" value="1"/>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="subTitle">Стрижка</p>
+                                <div class="inputWrap">
+                                    <span>1</span>
+                                    <input type="range" min="1" max="10" value="1"/>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="subTitle">Стрижка</p>
+                                <div class="inputWrap">
+                                    <span>1</span>
+                                    <input type="range" min="1" max="10" value="1"/>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="subTitle">Стрижка</p>
+                                <div class="inputWrap">
+                                    <span>1</span>
+                                    <input type="range" min="1" max="10" value="1"/>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="subTitle">Стрижка</p>
+                                <div class="inputWrap">
+                                    <span>1</span>
+                                    <input type="range" min="1" max="10" value="1"/>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="subTitle">Стрижка</p>
+                                <div class="inputWrap">
+                                    <span>1</span>
+                                    <input type="range" min="1" max="10" value="1"/>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clothes">
+                        <div class="title">Одежда</div>
+                        <div class="params">
+                            <div>
+                                <p class="subTitle">Обувь</p>
+                                <div class="inputWrap">
+                                    <span>1</span>
+                                    <input type="range" min="1" max="10" value="1"/>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="subTitle">Штаны</p>
+                                <div class="inputWrap">
+                                    <span>1</span>
+                                    <input type="range" min="1" max="10" value="1"/>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="subTitle">Футболка</p>
+                                <div class="inputWrap">
+                                    <span>1</span>
+                                    <input type="range" min="1" max="10" value="1"/>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="subTitle">Костюм</p>
+                                <div class="inputWrap">
+                                    <span>1</span>
+                                    <input type="range" min="1" max="10" value="1"/>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="subTitle">Аксессуары</p>
+                                <div class="inputWrap">
+                                    <span>1</span>
+                                    <input type="range" min="1" max="10" value="1"/>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="subTitle">Аксессуары</p>
+                                <div class="inputWrap">
+                                    <span>1</span>
+                                    <input type="range" min="1" max="10" value="1"/>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="subTitle">Аксессуары</p>
+                                <div class="inputWrap">
+                                    <span>1</span>
+                                    <input type="range" min="1" max="10" value="1"/>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="subTitle">Аксессуары</p>
+                                <div class="inputWrap">
+                                    <span>1</span>
+                                    <input type="range" min="1" max="10" value="1"/>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="subTitle">Аксессуары</p>
+                                <div class="inputWrap">
+                                    <span>1</span>
+                                    <input type="range" min="1" max="10" value="1"/>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col3">
+                <div class="btnWrap">
+                    <button>Создать персонажа</button>
+                    <div class="btnChildWrap">
+                        <button>Сгенерировать случайно</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="https://kit.fontawesome.com/5f439b4246.js" crossorigin="anonymous"></script>
+</body>
+</html>

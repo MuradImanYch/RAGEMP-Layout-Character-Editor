@@ -1,0 +1,469 @@
+* {
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+	padding: 0;
+}
+
+body {
+    overflow: hidden;
+    height: 100vh;
+    background: url('../assets/img/bg.jpg') no-repeat center/cover;
+}
+.container  {
+    width: 100%;
+    height: 100vh;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.playerDataWrap {
+    width: 250px;
+    height: 540px;
+    background: linear-gradient(60deg, rgba(9, 204, 2, 0.5), rgba(255, 255, 255, 0.5), rgba(9, 204, 2, 0.5));
+    backdrop-filter: blur(5px);
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;  
+    border: 2px solid rgb(61, 61, 61);
+}
+.playerDataWrap .title {
+    background-color: #fff;
+    width: 150px;
+    text-align: center;
+    padding: 8px;
+    border-radius: 8px;
+    color: #000;
+    font-size: 1.1em;
+    border: 2px solid rgb(61, 61, 61);
+}
+.playerDataWrap form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 130px;
+    justify-content: space-between;
+    margin: 20px 0 0 0;
+}
+.playerDataWrap form input {
+    height: 40px;
+    font-size: 1.1em;
+    outline: none;
+    border: none;
+    width: 100%;
+    padding: 0 10px;
+    border-radius: 8px;
+    border: 2px solid rgb(61, 61, 61);
+}
+.playerDataWrap form label {
+    font-size: 0.95em;
+}
+.playerDataWrap #genderWrap {
+    width: 160px;
+    height: 120px;
+    margin: 30px 0 0 0;
+    border-radius: 20px;
+    border: 2px solid rgb(61, 61, 61);
+    background: #fff;
+    padding: 10px 0 0 0;
+}
+.playerDataWrap #genderWrap .title {
+    border: 0;
+    background: transparent;
+    padding: 0;
+}
+.playerDataWrap #genderWrap .iconsWrap {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.playerDataWrap #genderWrap .iconsWrap div {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.1em;
+    color: #fff;
+}
+.playerDataWrap #genderWrap .iconsWrap div:first-child {
+    background-color: rgb(144, 207, 228);
+}
+.playerDataWrap #genderWrap .iconsWrap div:last-child {
+    background-color: rgb(255, 169, 184);
+}
+.playerDataWrap #ageWrap {
+    width: 160px;
+    height: 120px;
+    margin: 30px 0 0 0;
+    border-radius: 20px;
+    border: 2px solid rgb(61, 61, 61);
+    background: #fff;
+    padding: 10px 0;
+}
+.playerDataWrap #ageWrap .title {
+    border: 0;
+    background: transparent;
+    padding: 0;
+}
+.playerDataWrap #ageWrap #age {
+    display: block;
+    text-align: center;
+    margin: 20px 0 0 0;
+    font-size: 1em;
+    font-weight: bold;
+}
+.playerDataWrap #ageWrap .rangeWrap  {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 0 0;
+}
+
+/*----Range params-----*/
+input[type=range] {
+    height: 20px;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 120px;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px #000000;
+    background: silver;
+    border-radius: 6px;
+    border: 0px solid #000101;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    box-shadow: 0px 0px 0px #000000;
+    border: 0px solid #000000;
+    height: 14px;
+    width: 28px;
+    border-radius: 6px;
+    background: #08AB02;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -4px;
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #72ff6d;
+  }
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px #000000;
+    background: #0BFF02;
+    border-radius: 6px;
+    border: 0px solid #000101;
+  }
+  input[type=range]::-moz-range-thumb {
+    box-shadow: 0px 0px 0px #000000;
+    border: 0px solid #000000;
+    height: 14px;
+    width: 28px;
+    border-radius: 6px;
+    background: #08AB02;
+    cursor: pointer;
+  }
+  input[type=range]::-ms-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: #0BFF02;
+    border: 0px solid #000101;
+    border-radius: 12px;
+    box-shadow: 0px 0px 0px #000000;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: #0BFF02;
+    border: 0px solid #000101;
+    border-radius: 12px;
+    box-shadow: 0px 0px 0px #000000;
+  }
+  input[type=range]::-ms-thumb {
+    margin-top: 1px;
+    box-shadow: 0px 0px 0px #000000;
+    border: 0px solid #000000;
+    height: 14px;
+    width: 28px;
+    border-radius: 6px;
+    background: #08AB02;
+    cursor: pointer;
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: #0BFF02;
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: #0BFF02;
+  }
+
+.characEditorWrap {
+    width: 500px;
+    height: 600px;
+    padding: 10px 0 0 0;
+}
+.characEditorWrap .col1 {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+}
+.characEditorWrap .col1 .title {
+    border: 2px solid rgb(61, 61, 61);
+    height: 30px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    font-size: 1em;
+    border-radius: 8px;
+}
+.characEditorWrap .col2 {
+    width: 100%;
+    height: 450px;
+    display: flex;
+    justify-content: space-between;
+}
+.characEditorWrap .col2 .nav {
+    width: 160px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.characEditorWrap .col2 .nav button {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.7em;
+    background-color: silver;
+    border: 2px solid rgb(61, 61, 61);
+}
+.characEditorWrap .col2 .nav button img {
+    width: 50px;
+    height: 50px;
+    opacity: 0.6;
+}
+.characEditorWrap .col2 .main {
+    width: 300px;
+    max-height: 100%;
+    border-radius: 8px;
+    border: 2px solid rgb(61, 61, 61);
+    background: linear-gradient(-60deg, rgba(9, 204, 2, 0.5), rgba(255, 255, 255, 0.5), rgba(9, 204, 2, 0.5));
+    padding: 10px;
+    overflow: auto;
+}
+::-webkit-scrollbar {
+    width: 3px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, rgb(0, 97, 0), rgb(0, 216, 0))
+}
+.characEditorWrap .col2 .main div:first-child {
+    width: 100%;
+}
+.characEditorWrap .col2 .main div:first-child .title {
+    height: 28px;
+    text-align: center;
+    font-size: 1em;
+    color: #000;
+    background: #fff;
+    width: 160px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(61, 61, 61);
+    border-radius: 8px;
+    padding: 0 10px;
+}
+.characEditorWrap .col2 .main .parents .parentsImg {
+    width: 230px;
+    height: 140px;
+    background: url('../assets/img/parentsBg.jpg') no-repeat center/cover;
+    filter: grayscale(100%);
+    margin: 10px auto;
+    border: 2px solid rgb(61, 61, 61);
+}
+.characEditorWrap .col2 .main .parents .params {
+    margin: 15px 0 0 0;
+}
+.characEditorWrap .col2 .main .parents .params > div {
+    width: 250px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    margin: 10px auto;
+    padding: 2px;
+}
+.characEditorWrap .col2 .main .parents .subTitle {
+    text-align: center;
+    color: #fff;
+}
+.characEditorWrap .col2 .main .appearance .params {
+    margin: 15px 0 0 0;
+}
+.characEditorWrap .col2 .main .appearance .params > div {
+    width: 250px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    margin: 10px auto;
+    padding: 2px;
+}
+.characEditorWrap .col2 .main .appearance .subTitle {
+    text-align: center;
+    color: #fff;
+}
+.characEditorWrap .col2 .main .hair .params {
+    margin: 15px 0 0 0;
+}
+.characEditorWrap .col2 .main .hair .params > div {
+    width: 250px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    margin: 10px auto;
+    padding: 2px;
+}
+.characEditorWrap .col2 .main .hair .subTitle {
+    text-align: center;
+    color: #fff;
+}
+.characEditorWrap .col2 .main .clothes .params {
+    margin: 15px 0 0 0;
+}
+.characEditorWrap .col2 .main .clothes .params > div {
+    width: 250px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    margin: 10px auto;
+    padding: 2px;
+}
+.characEditorWrap .col2 .main .clothes .subTitle {
+    text-align: center;
+    color: #fff;
+}
+.characEditorWrap .col2 .main .inputWrap {
+    margin: 2px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+}
+.characEditorWrap .col2 .main .inputWrap button {
+    cursor: pointer;
+}
+.characEditorWrap .col2 .main .inputWrap button:active {
+    color: green;
+}
+.characEditorWrap .col2 .main .inputWrap button:first-child {
+    width: 20px;
+    padding: 0 2px 0 0;
+}
+.characEditorWrap .col2 .main .inputWrap button:last-child {
+    width: 20px;
+    padding: 0 0 0 2px;
+}
+.characEditorWrap .col2 .main .inputWrap button i {
+    font-size: 1.2em;
+}
+.characEditorWrap .col2 .main .inputWrap p {
+    background: #fff;
+    width: 190px;
+    text-align: center;
+    border: 2px solid silver;
+}
+.characEditorWrap .col2 .main .inputWrap input[type=range] {
+    background: transparent;
+    padding: 0 0 20px 0;
+    width: 150px;
+}
+.characEditorWrap .col2 .main .inputWrap span {
+    color: #fff;
+}
+.characEditorWrap .col3 {
+    width: 100%;
+    height: 90px;
+    margin: 10px 0 0 0;
+}
+.characEditorWrap .col3 .btnWrap {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.characEditorWrap .col3 .btnWrap button {
+    width: 300px;
+    background-color: #fff;
+    font-size: 1.1em;
+    border-radius: 8px;
+    outline: none;
+    height: 30px;
+    cursor: pointer;
+    border: 0;
+    color: #000;
+}
+.characEditorWrap .col3 .btnWrap button:hover {
+    background-color: rgb(156, 156, 156);
+    transition: 0.4s;
+}
+.characEditorWrap .col3 .btnChildWrap {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+}
+.characEditorWrap .col3 .btnChildWrap button {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+    font-size: 0.9em;
+    width: 200px;
+    height: 30px;
+    margin: 10px 0 0 0;
+}
+.characEditorWrap .col3 .btnChildWrap button:hover {
+    background-color: rgba(0, 0, 0, 1);
+    transition: 0.4s;
+}
+
+.appearance .title, .hair .title, .clothes .title {
+    height: 28px;
+    text-align: center;
+    font-size: 1em;
+    color: #000;
+    background: #fff;
+    width: 160px !important;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(61, 61, 61);
+    border-radius: 8px;
+    padding: 0 10px;
+}
